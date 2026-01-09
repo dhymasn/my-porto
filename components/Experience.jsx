@@ -9,7 +9,7 @@ export default function Experience() {
           <h4>Fullstack Development - Bimasakti Seluler Indonesia, PT (Fulltime Remote)</h4>
           <p>Sep 2024 - Present</p>
           <div className="tech">
-            Codeigniter · Javascript · Mysql · PHP Development · Gitlab/Github · PHP Native · Bootstrap · Tailwind · Filezilla
+            Codeigniter · Javascript · Mysql · PHP Development · Gitlab/Github · PHP Native · Bootstrap · Tailwind · Jquery
           </div>
           <p>
             • Managing and optimizing databases to maintain efficiency, data integrity, and system performance.
@@ -33,10 +33,10 @@ export default function Experience() {
         </div>
 
         <div className="experience-card">
-          <h4>Software Development - Freelance Onsite / Fulltime Remote</h4>
+          <h4>Software Development - Freelance (Onsite) / Fulltime Remote</h4>
           <p>Jan 2021 - Jun 2023</p>
           <div className="tech">
-            Codeigniter · Javascript · Mysql · Sql Server · Laravel · PostgreSql
+            Codeigniter · Javascript · Mysql · Sql Server · Laravel · PostgreSql . Jquery
           </div>
           <p>
             • Development, built and implementation of a web based registration system (Sipandawa).
