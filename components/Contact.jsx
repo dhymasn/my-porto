@@ -28,6 +28,7 @@ export default function Contact() {
           </svg>
           <h4>Location</h4>
           <p>Pasaman, West Sumatera, Indonesia</p>
+          <p>Remote(Global)</p>
         </div>
       </div>
     </section>
