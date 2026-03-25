@@ -27,7 +27,7 @@ export default function Contact() {
               d="M12 2C7.6 2 4 5.5 4 9.9c0 5.4 7.1 11.6 7.4 11.8.4.3.9.3 1.3 0 .3-.2 7.4-6.4 7.4-11.8C20 5.5 16.4 2 12 2zm0 11.1c-1.8 0-3.2-1.4-3.2-3.2S10.2 6.7 12 6.7s3.2 1.4 3.2 3.2S13.8 13.1 12 13.1z" />
           </svg>
           <h4>Location</h4>
-          <p>Pasaman, West Sumatera, Indonesia</p>
+          <p>Bekasi City, Indonesia</p>
           <p>Remote(Global)</p>
         </div>
       </div>
