@@ -29,18 +29,7 @@ export default function Portfolio() {
             </div>
           </div>
         </a>
-        <a href="https://rsudadj.com/" target="_blank" rel="noopener noreferrer">
-          <div className="project">
-            <div className="project-images">
-              <Image src="/img/sisdarlin.jpg" alt="Sisdarlin" width={600} height={400} />
-            </div>
-            <div className="project-content">
-              <h3>Sisdarlin</h3>
-              <p>Hospital Online Service Registration System to facilitate patient registration and queue number management.</p>
-              <div className="tech">Codeigniter · Javascript · Bootstrap</div>
-            </div>
-          </div>
-        </a>
+        
 
       </div>
     </section>
