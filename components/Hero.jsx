@@ -25,7 +25,7 @@ export default function Hero() {
         </div>
         </div>
         <div class="hero-photo">
-        <Image src="/img/profile.png" alt="Profile" width={450} height={450} />
+        <Image src="/img/profile.png" alt="Profile" width={450} height={550} />
         </div>
     </section>
   );
