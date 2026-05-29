@@ -17,7 +17,7 @@ export default function Portfolio() {
             </div>
           </div>
         </a>
-        <a href="https://kopaci.or.id/" target="_blank" rel="noopener noreferrer">
+        <a href="https://kopaci-b6509d.netlify.app/" target="_blank" rel="noopener noreferrer">
           <div className="project">
             <div className="project-images">
               <Image src="/img/kopaci.jpg" alt="Kopaci" width={600} height={400} />
