@@ -7,7 +7,7 @@ export default function Experience() {
 
         <div className="experience-card">
           <h4>Fullstack Development - Bimasakti Seluler Indonesia, PT (Fulltime Remote)</h4>
-          <p>Sep 2024 - Juni 2026</p>
+          <p>Sep 2024 - Jun 2026</p>
           <div className="tech">
             Codeigniter · Javascript · Mysql · PHP Development · Gitlab/Github · PHP Native · Bootstrap · Tailwind · Jquery
           </div>
