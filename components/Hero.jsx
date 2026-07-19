@@ -6,8 +6,7 @@ export default function Hero() {
     <section id="home" className="hero reveal">
         <div>
         <h1>Hi, I’m Dhymas Nanda Yusuf</h1>
-        <h2>Software Engineer</h2>
-        <p>Fullstack Developer with 2+ years of professional experience, specializing in transforming complex ideas and business processes into efficient and scalable digital solutions. Proficient in PHP Development, Laravel, CodeIgniter, Node.js, and SQL database management, with experience across Software Houses, Healthcare, IT Consulting, and Infrastructure & Technology. Beyond developing web applications, I focus on delivering solutions that effectively address business challenges rather than merely writing code.</p>
+        <p>Software Engineer with 2+ years of professional experience, specializing in transforming complex ideas and business processes into efficient and scalable digital solutions. Proficient in PHP Development, Laravel, CodeIgniter, Node.js, and SQL database management, with experience across Software Houses, Healthcare, IT Consulting, and Infrastructure & Technology. Beyond developing web applications, I focus on delivering solutions that effectively address business challenges rather than merely writing code.</p>
         <div class="cta">
             <a href="#contact" class="btn">Get in Touch</a>
         </div>
