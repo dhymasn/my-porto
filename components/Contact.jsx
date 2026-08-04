@@ -7,8 +7,8 @@ export default function Contact() {
       style={{
         backgroundColor: "#1e2029",
         color: "#ffffff",
-        paddingTop: "28px",
-        paddingBottom: "24px",
+        paddingTop: "2px",
+        paddingBottom: "10px",
         paddingLeft: "16px",
         paddingRight: "16px",
         position: "relative",
@@ -20,7 +20,7 @@ export default function Contact() {
         style={{
           paddingTop: "20px",
           textAlign: "center",
-          fontSize: "14px",
+          fontSize: "15px",
           opacity: 0.9,
         }}
       >
