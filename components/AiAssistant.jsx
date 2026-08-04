@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Sparkles, Send, X, Bot } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 export default function AiAssistant() {
   const [isOpen, setIsOpen] = useState(false);
@@ -240,16 +241,36 @@ export default function AiAssistant() {
                 >
                   <div
                     style={{
-                      maxWidth: "80%",
+                      maxWidth: "85%",
                       padding: "12px",
                       borderRadius: "12px",
                       backgroundColor: msg.role === "user" ? "#00D0A7" : "rgba(255,255,255,0.08)",
                       color: msg.role === "user" ? "#000" : "#e2e8f0",
                       fontWeight: msg.role === "user" ? "600" : "normal",
-                      lineHeight: "1.5",
+                      lineHeight: "1.6",
                     }}
                   >
-                    {msg.content}
+                    {msg.role === "user" ? (
+                      msg.content
+                    ) : (
+                      <ReactMarkdown
+                        components={{
+                          p: ({ node, ...props }) => <p style={{ margin: "0 0 8px 0" }} {...props} />,
+                          ul: ({ node, ...props }) => (
+                            <ul style={{ margin: "4px 0 8px 0", paddingLeft: "16px", listStyleType: "disc" }} {...props} />
+                          ),
+                          ol: ({ node, ...props }) => (
+                            <ol style={{ margin: "4px 0 8px 0", paddingLeft: "16px", listStyleType: "decimal" }} {...props} />
+                          ),
+                          li: ({ node, ...props }) => <li style={{ marginBottom: "4px" }} {...props} />,
+                          strong: ({ node, ...props }) => (
+                            <strong style={{ fontWeight: "600", color: "#00D0A7" }} {...props} />
+                          ),
+                        }}
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
+                    )}
                   </div>
                 </div>
               ))
