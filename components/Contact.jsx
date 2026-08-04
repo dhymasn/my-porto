@@ -20,7 +20,7 @@ export default function Contact() {
         style={{
           paddingTop: "20px",
           textAlign: "center",
-          fontSize: "15px",
+          fontSize: "14px",
           opacity: 0.9,
         }}
       >
