@@ -1,15 +1,43 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Sparkles, Send, X, Bot } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import { Sparkles, Send, X, Bot, Globe } from "lucide-react";
 
 export default function AiAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState("id"); // 'id' | 'en'
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
+
+  // Kamus Teks (Dictionary) untuk UI Multi-bahasa
+  const t = {
+    id: {
+      buttonTrigger: "TANYA AI DHYMAS",
+      headerSubtitle: "Powered by Dhyms",
+      welcomeTitle: "Halo! Ada yang ingin ditanyakan?",
+      welcomeDesc: "Coba tanya seputar tech stack, keahlian, atau pengalaman kerja Dhymas.",
+      suggestion1: "💡 Apa saja tech stack Dhymas?",
+      suggestion2: "💼 Bagaimana pengalaman kerjanya?",
+      placeholder: "Ketik pertanyaan...",
+      errorServer: "Maaf, terjadi kesalahan pada server.",
+      errorConnect: "Gagal terhubung ke server.",
+      typing: "Sedang mengetik...",
+    },
+    en: {
+      buttonTrigger: "ASK DHYMAS AI",
+      headerSubtitle: "Powered by Dhyms",
+      welcomeTitle: "Hello! How can I help you?",
+      welcomeDesc: "Feel free to ask about Dhymas's tech stack, skills, or work experience.",
+      suggestion1: "💡 What is Dhymas's tech stack?",
+      suggestion2: "💼 Tell me about his work experience.",
+      placeholder: "Type a message...",
+      errorServer: "Sorry, a server error occurred.",
+      errorConnect: "Failed to connect to the server.",
+      typing: "Typing...",
+    },
+  };
 
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -18,6 +46,10 @@ export default function AiAssistant() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
+
+  const toggleLanguage = () => {
+    setLang((prev) => (prev === "id" ? "en" : "id"));
+  };
 
   const handleSend = async (textToSend) => {
     const query = textToSend || input;
@@ -32,7 +64,8 @@ export default function AiAssistant() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: newMessages }),
+        // Mengirimkan parameter 'lang' ke API backend
+        body: JSON.stringify({ messages: newMessages, lang }),
       });
 
       const data = await res.json();
@@ -41,22 +74,42 @@ export default function AiAssistant() {
       } else {
         setMessages((prev) => [
           ...prev,
-          { role: "assistant", content: "Maaf, terjadi kesalahan pada server." },
+          { role: "assistant", content: t[lang].errorServer },
         ]);
       }
     } catch (err) {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Gagal terhubung ke server." },
+        { role: "assistant", content: t[lang].errorConnect },
       ]);
     } finally {
       setLoading(false);
     }
   };
 
+  const renderFormattedText = (text) => {
+    return text.split("\n").map((line, lineIdx) => {
+      const parts = line.split(/(\*\*.*?\*\*)/g);
+      return (
+        <span key={lineIdx} style={{ display: "block", marginBottom: line.trim() ? "4px" : "8px" }}>
+          {parts.map((part, partIdx) => {
+            if (part.startsWith("**") && part.endsWith("**")) {
+              return (
+                <strong key={partIdx} style={{ color: "#00D0A7", fontWeight: "600" }}>
+                  {part.slice(2, -2)}
+                </strong>
+              );
+            }
+            return part;
+          })}
+        </span>
+      );
+    });
+  };
+
   return (
     <>
-      {/* Tombol Trigger (Pojok Kanan Bawah) */}
+      {/* Tombol Trigger */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
@@ -81,7 +134,7 @@ export default function AiAssistant() {
           }}
         >
           <Sparkles className="w-5 h-5 text-black" />
-          <span>TANYA AI DHYMAS</span>
+          <span>{t[lang].buttonTrigger}</span>
         </button>
       )}
 
@@ -135,23 +188,47 @@ export default function AiAssistant() {
                   MY AI ASSISTANT
                 </h3>
                 <p style={{ margin: 0, fontSize: "11px", color: "#00D0A7", fontWeight: "500" }}>
-                  Powered by Dhyms
+                  {t[lang].headerSubtitle}
                 </p>
               </div>
             </div>
 
-            <button
-              onClick={() => setIsOpen(false)}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#94a3b8",
-                cursor: "pointer",
-                padding: "4px",
-              }}
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              {/* Tombol Switch Bahasa */}
+              <button
+                onClick={toggleLanguage}
+                title="Switch Language"
+                style={{
+                  background: "rgba(255, 255, 255, 0.1)",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  color: "#00D0A7",
+                  cursor: "pointer",
+                  padding: "4px 8px",
+                  borderRadius: "6px",
+                  fontSize: "11px",
+                  fontWeight: "bold",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span>{lang.toUpperCase()}</span>
+              </button>
+
+              <button
+                onClick={() => setIsOpen(false)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "#94a3b8",
+                  cursor: "pointer",
+                  padding: "4px",
+                }}
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Chat Body */}
@@ -189,15 +266,15 @@ export default function AiAssistant() {
                   <Sparkles className="w-7 h-7" />
                 </div>
                 <h4 style={{ margin: "0 0 6px 0", fontSize: "14px", fontWeight: "600" }}>
-                  Halo! Ada yang ingin ditanyakan?
+                  {t[lang].welcomeTitle}
                 </h4>
                 <p style={{ margin: "0 0 20px 0", color: "#94a3b8", fontSize: "11px", lineHeight: "1.5" }}>
-                  Coba tanya seputar tech stack, keahlian, atau pengalaman kerja Dhymas.
+                  {t[lang].welcomeDesc}
                 </p>
 
                 <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "10px" }}>
                   <button
-                    onClick={() => handleSend("Apa saja tech stack Dhymas?")}
+                    onClick={() => handleSend(lang === "id" ? "Apa saja tech stack Dhymas?" : "What is Dhymas's tech stack?")}
                     style={{
                       width: "100%",
                       textAlign: "left",
@@ -210,10 +287,10 @@ export default function AiAssistant() {
                       cursor: "pointer",
                     }}
                   >
-                    💡 Apa saja tech stack Dhymas?
+                    {t[lang].suggestion1}
                   </button>
                   <button
-                    onClick={() => handleSend("Bagaimana pengalaman kerjanya?")}
+                    onClick={() => handleSend(lang === "id" ? "Bagaimana pengalaman kerjanya?" : "Tell me about his work experience.")}
                     style={{
                       width: "100%",
                       textAlign: "left",
@@ -226,7 +303,7 @@ export default function AiAssistant() {
                       cursor: "pointer",
                     }}
                   >
-                    💼 Bagaimana pengalaman kerjanya?
+                    {t[lang].suggestion2}
                   </button>
                 </div>
               </div>
@@ -250,27 +327,7 @@ export default function AiAssistant() {
                       lineHeight: "1.6",
                     }}
                   >
-                    {msg.role === "user" ? (
-                      msg.content
-                    ) : (
-                      <ReactMarkdown
-                        components={{
-                          p: ({ node, ...props }) => <p style={{ margin: "0 0 8px 0" }} {...props} />,
-                          ul: ({ node, ...props }) => (
-                            <ul style={{ margin: "4px 0 8px 0", paddingLeft: "16px", listStyleType: "disc" }} {...props} />
-                          ),
-                          ol: ({ node, ...props }) => (
-                            <ol style={{ margin: "4px 0 8px 0", paddingLeft: "16px", listStyleType: "decimal" }} {...props} />
-                          ),
-                          li: ({ node, ...props }) => <li style={{ marginBottom: "4px" }} {...props} />,
-                          strong: ({ node, ...props }) => (
-                            <strong style={{ fontWeight: "600", color: "#00D0A7" }} {...props} />
-                          ),
-                        }}
-                      >
-                        {msg.content}
-                      </ReactMarkdown>
-                    )}
+                    {msg.role === "user" ? msg.content : renderFormattedText(msg.content)}
                   </div>
                 </div>
               ))
@@ -287,7 +344,7 @@ export default function AiAssistant() {
                     fontSize: "11px",
                   }}
                 >
-                  Sedang mengetik...
+                  {t[lang].typing}
                 </div>
               </div>
             )}
@@ -313,7 +370,7 @@ export default function AiAssistant() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ketik pertanyaan..."
+                placeholder={t[lang].placeholder}
                 style={{
                   flex: 1,
                   backgroundColor: "rgba(255, 255, 255, 0.05)",
