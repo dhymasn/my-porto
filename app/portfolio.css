@@ -1,0 +1,324 @@
+/* =========================
+   Portfolio Grid 3 Column
+========================= */
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  width: 100%;
+}
+
+
+/* Link */
+
+.portfolio-grid a {
+  text-decoration: none;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.project {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #171d35;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+
+  transition:
+    opacity .8s ease,
+    transform .4s ease,
+    box-shadow .4s ease;
+
+}
+
+
+/* Animation */
+
+.project.show-detail {
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+
+/* Hover */
+
+.project:hover {
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+/* =========================
+   Image
+========================= */
+
+.project-images {
+
+  width:100%;
+
+  height:100%;
+
+}
+
+
+.project-images img {
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+
+  transition:
+  transform .5s ease;
+
+}
+
+
+.project:hover .project-images img {
+
+  transform:scale(1.05);
+
+}
+
+
+
+/* =========================
+   Content Overlay
+========================= */
+
+
+.project-content {
+
+  position:absolute;
+
+  bottom:0;
+
+  left:0;
+
+  right:0;
+
+
+  padding:24px;
+
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(12,17,34,.98),
+    rgba(12,17,34,.85) 50%,
+    transparent
+  );
+
+
+  transform:
+  translateY(calc(100% - 80px));
+
+
+  transition:
+  transform .45s ease;
+
+}
+
+
+
+.project:hover .project-content {
+
+  transform:translateY(0);
+
+}
+
+
+
+/* Title */
+
+.project-content h3 {
+
+  margin:0;
+
+  color:#fff;
+
+  font-size:1.7rem;
+
+  font-weight:700;
+
+}
+
+
+
+/* Hidden */
+
+.project-content p,
+.project-content .tech,
+.project-content .project-detail {
+
+
+  opacity:0;
+
+  transform:translateY(15px);
+
+
+  transition:
+  all .35s ease;
+
+}
+
+
+
+/* Hover Show */
+
+.project:hover .project-content p,
+.project:hover .project-content .tech,
+.project:hover .project-content .project-detail {
+
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+
+/* Description */
+
+.project-content p {
+
+  margin:14px 0 10px;
+
+  color:#fff;
+
+  font-size:.95rem;
+
+  line-height:1.6;
+
+}
+
+
+
+/* Tech */
+
+.tech {
+
+  color:#38bdf8;
+
+  font-size:.9rem;
+
+  font-weight:600;
+
+}
+
+
+
+/* Detail */
+
+.project-detail {
+
+  color:rgba(255,255,255,.85);
+
+  font-size:.9rem;
+
+  line-height:1.6;
+
+
+  max-height:120px;
+
+  overflow-y:auto;
+
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+
+/* Tablet */
+
+@media(max-width:992px){
+
+  .portfolio-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+  }
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:576px){
+
+  .portfolio-grid{
+
+    grid-template-columns:
+    1fr;
+
+    gap:20px;
+
+  }
+
+
+  .project{
+
+    height:320px;
+
+  }
+
+
+  .project-content{
+
+    transform:translateY(0);
+
+  }
+
+
+  .project-content p,
+  .project-content .tech,
+  .project-content .project-detail{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}

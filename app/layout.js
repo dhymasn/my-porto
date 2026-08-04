@@ -1,3 +1,7 @@
+// app/layout.js
+import "./globals.css";
+import "./portfolio.css";
+import AiAssistant from "../components/AiAssistant";
 
 export const metadata = {
   title: "Dhymas Nanda - Software Engineer",
@@ -7,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* AiAssistant berada di tingkat root agar tidak terganggu animasi/layout page */}
+        <AiAssistant />
+      </body>
     </html>
   );
 }

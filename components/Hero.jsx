@@ -7,7 +7,7 @@ export default function Hero() {
         <div>
         <h1>I’m Dhymas Nanda Yusuf</h1>
         <h2>Software Engineer</h2>
-        <p>Software Engineer with 2+ years of professional experience in designing and developing scalable web applications and digital solutions. Skilled in PHP development, Laravel, CodeIgniter, Node.js, and SQL database management, with experience across Software Houses, Healthcare, IT Consulting, and Infrastructure & Technology sectors. Passionate about transforming complex business requirements into efficient, user-focused solutions that solve real-world challenges and deliver measurable business value.</p>
+        <p>Software Engineer with 2+ years of professional experience in designing and developing scalable web applications and digital solutions. Skilled in <strong>PHP (PHP Native, Laravel, CodeIgniter), Next.js, Node.js, MySQL , PostgreSQL , SQL Server 2008 R2</strong> with experience across Software Houses, Healthcare, IT Consulting, and Infrastructure & Technology sectors. Passionate about transforming complex business requirements into efficient, user-focused solutions that solve real-world challenges and deliver measurable business value.</p>
         <div class="cta">
             <a href="#contact" class="btn">Get in Touch</a>
         </div>

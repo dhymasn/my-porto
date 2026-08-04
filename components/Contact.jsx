@@ -28,7 +28,7 @@ export default function Contact() {
           </svg>
           <h4>Location</h4>
           <p>Bekasi City, Indonesia</p>
-          <p>Remote(Global)</p>
+          <p>Open to Fulltime Remote Opportunities</p>
         </div>
       </div>
     </section>
