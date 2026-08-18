@@ -14,7 +14,7 @@ export default function AiAssistant() {
   // Kamus Teks (Dictionary) untuk UI Multi-bahasa
   const t = {
     id: {
-      buttonTrigger: "TANYA AI DHYMAS",
+      buttonTrigger: "TANYA AI DHYMS",
       headerSubtitle: "Powered by Dhyms",
       welcomeTitle: "Halo! Ada yang ingin ditanyakan?",
       welcomeDesc: "Coba tanya seputar tech stack, keahlian, atau pengalaman kerja Dhymas.",
