@@ -50,7 +50,7 @@ export default function Experience() {
           <h4>Programmer - Galeri Teknologi Bersama, PT</h4>
           <p>Dec 2020 - Dec 2021</p>
           <div className="tech">
-            Codeigniter · Javascript · Mysql · Github
+            Codeigniter · Javascript · Mysql · Github · Custom CSS · RESTful API
           </div>
           <p>
             • Developed an ERP system for the healthcare industry with a focus on Covid-19-related systems and online print queue.
