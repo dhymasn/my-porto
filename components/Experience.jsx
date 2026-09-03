@@ -9,7 +9,7 @@ export default function Experience() {
           <h4>Fullstack Development - Bimasakti Seluler Indonesia, PT (Fulltime Remote)</h4>
           <p>Sep 2024 - May 2026</p>
           <div className="tech">
-            Codeigniter · Javascript · Mysql · PHP Development · Gitlab/Github · PHP Native · Bootstrap · Tailwind Css · Jquery · Next.js · Wordpress
+            Codeigniter · Javascript · Mysql · PHP · Gitlab/Github · PHP Native · Bootstrap · Tailwind Css · Jquery · Next.js · Wordpress
           </div>
           <p>
             • Managing and optimizing databases to maintain efficiency, data integrity, and system performance.
@@ -23,7 +23,7 @@ export default function Experience() {
           <h4>IT Software Development - Abudisa Perkasa Indonesia, PT (Fulltime Remote)</h4>
           <p>Jul 2023 - Jul 2024</p>
           <div className="tech">
-            Codeigniter · Javascript · Mysql · PHP Development · Gitlab/Github · Custom Design · Bootstrap · Jquery
+            Codeigniter · Javascript · Mysql · PHP · Gitlab/Github · Custom Design · Bootstrap · Jquery
           </div>
           <p>
             • Developed and managed a project management system and database to support operational efficiency, data integrity, and system performance.
