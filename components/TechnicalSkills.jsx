@@ -4,56 +4,56 @@ export default function TechnicalSkills() {
       title: "Languages",
       icon: "fas fa-code",
       skills: [
-        { name: "PHP", level: "EXPERT" },
-        { name: "JavaScript", level: "EXPERT" },
-        { name: "SQL", level: "EXPERT" },
-        { name: "TypeScript", level: "MEDIUM" },
+        { name: "PHP"},
+        { name: "JavaScript"},
+        { name: "SQL"},
+        { name: "TypeScript"},
       ],
     },
     {
       title: "Frameworks & Ecosystem",
       icon: "fas fa-cubes",
       skills: [
-        { name: "Codeigniter", level: "EXPERT" },
-        { name: "Laravel", level: "MEDIUM" },
-        { name: "Next JS", level: "MEDIUM" },
-        { name: "Node JS", level: "MEDIUM" },
-        { name: "Jquery", level: "EXPERT" },
+        { name: "Codeigniter"},
+        { name: "Laravel"},
+        { name: "Next JS"},
+        { name: "Node JS"},
+        { name: "Jquery"},
       ],
     },
     {
       title: "Frontend",
       icon: "fas fa-palette",
       skills: [
-        { name: "Bootstrap", level: "EXPERT" },
-        { name: "Tailwind CSS", level: "EXPERT" },
+        { name: "Bootstrap"},
+        { name: "Tailwind CSS"},
       ],
     },
     {
       title: "Databases",
       icon: "fas fa-database",
       skills: [
-        { name: "MySQL", level: "EXPERT" },
-        { name: "PostgreSQL", level: "MEDIUM" },
-        { name: "SQL Server 2008 R2", level: "MEDIUM" },
+        { name: "MySQL"},
+        { name: "PostgreSQL"},
+        { name: "SQL Server 2008 R2"},
       ],
     },
     {
       title: "API & Integrations",
       icon: "fas fa-plug",
       skills: [
-        { name: "RESTful API Design", level: "MEDIUM" },
-        { name: "Payment Gateways (Midtrans, Xendit)", level: "ADVANCED" },
-        { name: "Google Drive API", level: "ADVANCED" },
+        { name: "RESTful API Design"},
+        { name: "Payment Gateways (Midtrans, Xendit)"},
+        { name: "Google Drive API"},
       ],
     },
     {
     title: "Developer Tools & Workflow",
     icon: "fas fa-tools",
     skills: [
-      { name: "Git (Github / Gitlab)", level: "EXPERT" },
-      { name: "Trello", level: "EXPERT" },
-      { name: "Ticketing System (Issue Tracking)", level: "EXPERT" },
+      { name: "Git (Github / Gitlab)"},
+      { name: "Trello"},
+      { name: "Ticketing System (Issue Tracking)"},
     ],
   },
   ];
@@ -81,7 +81,6 @@ export default function TechnicalSkills() {
                   {category.skills.map((skill, idx) => (
                     <div className="skill-item" key={idx}>
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-level">{skill.level}</span>
                     </div>
                   ))}
                 </div>
