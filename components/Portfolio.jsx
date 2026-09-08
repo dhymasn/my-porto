@@ -25,8 +25,14 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="reveal">
-      <h2 className="section-title">Portfolio</h2>
-
+      <div className="d-flex align-items-center gap-3 mb-4">
+        <span className="fw-bold text-white text-uppercase fs-6 tracking-wider">
+          ALL WORK
+        </span>
+        <div className="flex-grow-1 border-top"></div>
+      </div>
+      <h3 className="section-title">Diverse Projects, Varied Experience</h3>
+      <p>Delivering value through every challenge from e-commerce platforms and healthcare <br/> registration to project management tools and enterprise solutions.</p>
       <div className="portfolio-grid">
 
         <a

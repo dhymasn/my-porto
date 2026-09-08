@@ -97,6 +97,11 @@
       margin-bottom: 1rem;
     }
 
+    .hero h4 {
+      color: var(--text-main); 
+      margin-bottom: 1rem;
+    }
+
     .hero p {
       color: var(--text-main);
       max-width: 500px;
@@ -167,6 +172,7 @@
 
     /* Portfolio 4 kolom */
     .portfolio-grid {
+      margin-top:60px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
@@ -220,6 +226,7 @@
 
     /* Experience section */
     .experience-grid {
+      margin-top:60px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
       gap: 2rem;
@@ -240,6 +247,12 @@
 
     .experience-card h4 {
       margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .experience-card h5 {
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
     }
 
     .experience-card p {
@@ -247,6 +260,185 @@
       color: var(--text-muted);
     }
 
+    /* =========================================================
+    TECHNICAL SKILLS SECTION (Dark Theme)
+    - Layout Split Left-Right (Name & Skill Level)
+    - FontAwesome Icon Centering Fix
+    ========================================================= */
+
+    #technical-skills {
+      margin-top: 4rem;
+      padding: 2rem 0;
+    }
+
+    .row-skills {
+      margin-top:20px;
+    }
+
+    .section-title {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    /* --- Card Container --- */
+    .skill-card {
+      height: 100%;
+      padding: 1.75rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(79, 209, 255, 0.4);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- Header & Icon Section --- */
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Presisi Rata Tengah untuk Icon Font Awesome / SVG */
+    .skill-icon {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 12px;
+      background: rgba(79, 209, 255, 0.12);
+      color: #4fd1ff;
+
+      /* Layouting Flexbox */
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      
+      /* Reset padding/margin pembungkus */
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden;
+    }
+
+    /* Memaksa elemen ikon di dalam pembungkus agar terpusat sempurna */
+    .skill-icon i,
+    .skill-icon svg,
+    .skill-icon .svg-inline--fa {
+      display: block !important;
+      margin: 0 auto !important;
+      
+      /* Atur ukuran ikon secara eksplisit agar proporsional */
+      width: 1.1em !important;
+      height: 1.1em !important;
+      
+      /* Matikan posisi absolute jika ada */
+      position: static !important;
+      vertical-align: middle !important;
+    }
+
+    .skill-title,
+
+    .skill-card h3,
+    .skill-card h4 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .skill-card h5 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    /* --- Skill List Section --- */
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Membagi Baris Menjadi 2 Sisi (Kiri: Nama, Kanan: Level) */
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .skill-item:hover {
+      border-color: #4fd1ff;
+      background: rgba(79, 209, 255, 0.08);
+    }
+
+    /* Nama Skill di Sisi Kiri */
+    .skill-name {
+      color: #e2e8f0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    /* Level Skill di Sisi Kanan */
+    .skill-level {
+      color: #a0aec0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .skill-item:hover .skill-level {
+      color: #4fd1ff;
+    }
+
+    /* =========================================================
+      RESPONSIVE BREAKPOINTS
+    ========================================================= */
+
+    @media (max-width: 991px) {
+      .skill-card {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #technical-skills {
+        margin-top: 2.5rem;
+      }
+      
+      .skill-title,
+      .skill-card h3,
+      .skill-card h4 {
+        font-size: 1.1rem;
+      }
+
+      .skill-name {
+        font-size: 0.8rem;
+      }
+
+      .skill-level {
+        font-size: 0.65rem;
+      }
+    }
+    
     .contact {
       color: var(--text-muted);
     }
