@@ -6,8 +6,8 @@ export default function TechnicalSkills() {
       skills: [
         { name: "PHP"},
         { name: "JavaScript"},
-        { name: "SQL"},
         { name: "TypeScript"},
+        { name: "SQL"},
       ],
     },
     {
