@@ -45,7 +45,7 @@ export default function Experience() {
           <h5>Fullstack Development - Freelance (Onsite) / Fulltime Remote</h5>
           <p>Jan 2021 - Jun 2023</p>
           <div className="tech">
-            PHP · Codeigniter · Laravel · Custom Design · Bootstrap · Javascript . Jquery . Mysql · SQL Server 2008 R2 · PostgreSql 
+            PHP · Codeigniter · Laravel · Custom Design · Bootstrap · Javascript . Jquery . Mysql · SQL Server 2008 R2 · PostgreSql · Gitlab 
           </div>
           <p className="experience-description">
             • Developed and implemented hospital registration systems <strong>(Sipandawa & Sisdarlin)</strong> to improve patient onboarding efficiency and support service digitalization.
