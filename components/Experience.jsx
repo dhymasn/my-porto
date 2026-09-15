@@ -17,13 +17,13 @@ export default function Experience() {
             PHP · PHP Native · Codeigniter · Next.js · Bootstrap · Tailwind Css · Jquery · Javascript · Mysql · Wordpress · Github
           </div>
           <p className="experience-description">
-            • Maintained, enhanced, and optimized the performance of the Tabuku childrenʼs e-commerce platform, particularly in data loading, to ensure a stable and responsive user &nbsp;&nbsp;&nbsp;experience.
-            <br/>• Provided technical support and developed the <strong>Simpro (System Management Project)</strong> module, an integrated system to manage cross division activities, improving &nbsp;&nbsp;&nbsp;operational efficiency, transparency, and document control.
-            <br/>• Developed and maintained an internal budget management system to support submission, approval, and realtime monitoring of operational budgets between branch &nbsp;&nbsp;&nbsp;offices and headquarters.
+            • Maintained, enhanced, and optimized the performance of the Tabuku childrenʼs e-commerce platform, particularly in data loading, to ensure a stable and responsive user &nbsp;&nbsp;experience.
+            <br/>• Provided technical support and developed the <strong>Simpro (System Management Project)</strong> module, an integrated system to manage cross division activities, improving &nbsp;&nbsp;operational efficiency, transparency, and document control.
+            <br/>• Developed and maintained an internal budget management system to support submission, approval, and realtime monitoring of operational budgets between branch &nbsp;&nbsp;offices and headquarters.
             <br/>• Managed and optimized database systems to improve performance, ensure data accuracy, and maintain data integrity across applications.
             <br/>• Implemented security and authentication mechanisms to protect user data and enhance overall system reliability.
             <br/>• Designed and developed a cooperative management system to support employee data management and operational processes.
-            <br/>• Collaborated with developers and third-party vendors to maintain IT infrastructure, while continuously tracking bugs via a ticketing system to support new feature &nbsp;&nbsp;&nbsp;development and system optimization reporting.
+            <br/>• Collaborated with developers and third-party vendors to maintain IT infrastructure, while continuously tracking bugs via a ticketing system to support new feature &nbsp;&nbsp;development and system optimization reporting.
           </p>
         </div>
 
@@ -34,10 +34,10 @@ export default function Experience() {
             PHP · Codeigniter · Javascript · Custom Design · Bootstrap · Jquery · Mysql · Github
           </div>
           <p className="experience-description">
-            • Responsible for the end to end design and development of the Tabuku childrenʼs e-commerce platform, from initial concept to production deployment, ensuring scalability &nbsp;&nbsp;&nbsp;and maintainability.
-            <br />• Developed and optimized project management system integration modules to streamline workflows, eliminate operational bottlenecks, and enhance cross functional team &nbsp;&nbsp;&nbsp;collaboration.
-            <br />• Enhanced database efficiency and reliability through continuous monitoring, maintenance, and optimization efforts, supporting accurate data management and stable &nbsp;&nbsp;&nbsp;application performance.
-            <br />• Collaborated with developers and third-party vendors to maintain IT infrastructure, while continuously tracking bugs via a ticketing system to support new feature &nbsp;&nbsp;&nbsp;development and system optimization reporting.
+            • Responsible for the end to end design and development of the Tabuku childrenʼs e-commerce platform, from initial concept to production deployment, ensuring scalability &nbsp;&nbsp;and maintainability.
+            <br />• Developed and optimized project management system integration modules to streamline workflows, eliminate operational bottlenecks, and enhance cross functional team &nbsp;&nbsp;collaboration.
+            <br />• Enhanced database efficiency and reliability through continuous monitoring, maintenance, and optimization efforts, supporting accurate data management and stable &nbsp;&nbsp;application performance.
+            <br />• Collaborated with developers and third-party vendors to maintain IT infrastructure, while continuously tracking bugs via a ticketing system to support new feature &nbsp;&nbsp;development and system optimization reporting.
           </p>
         </div>
 
