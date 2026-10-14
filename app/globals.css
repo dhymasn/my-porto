@@ -222,6 +222,7 @@
     .tech {
       color: var(--accent-2);
       font-size: 0.8rem;
+      margin-top:-10px;
     }
 
     /* Experience section */
