@@ -42,7 +42,7 @@ export default function Portfolio() {
         >
           <div className="project">
             <div className="project-images">
-              <Image src="/img/tabuku.jpg" alt="Tabuku" width={600} height={400} />
+              <Image src="/img/tabuku.jpg" alt="Tabuku" width={600} height={350} />
             </div>
 
             <div className="project-content">
@@ -64,7 +64,7 @@ export default function Portfolio() {
         <a href="https://kopaci-b6509d.netlify.app/" target="_blank" rel="noopener noreferrer" >
           <div className="project">
             <div className="project-images">
-              <Image src="/img/kopaci.jpg" alt="Kopaci" width={600} height={400} />
+              <Image src="/img/kopaci.jpg" alt="Kopaci" width={600} height={350} />
             </div>
 
             <div className="project-content">
@@ -84,7 +84,7 @@ export default function Portfolio() {
         <a href="https://asosiasisampah.co.id/" target="_blank" rel="noopener noreferrer" >
           <div className="project">
             <div className="project-images">
-              <Image src="/img/web-apsi.png" alt="APSI" width={600} height={400} />
+              <Image src="/img/web-apsi.png" alt="APSI" width={600} height={350} />
             </div>
 
             <div className="project-content">
